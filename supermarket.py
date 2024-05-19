@@ -22,18 +22,34 @@ class Store:
             self.items[item_name] = new_price
 
 # Создание объектов класса Store
-store1 = Store("Магазин 1", "Адрес 1")
-store2 = Store("Магазин 2", "Адрес 2")
-store3 = Store("Магазин 3", "Адрес 3")
+magnit = Store("Магнит", "Фрунзе 12")
+carusel = Store("Карусель", "Гагарина 5")
+perekrestok = Store("Перекресток", "маяковского 8")
+chijik = Store("Чижик", "Гарнаева 17")
 
 # Добавление товаров
-store1.add_item("Яблоки", 0.5)
-store1.add_item("Бананы", 0.75)
-store2.add_item("Хлеб", 1.0)
-store3.add_item("Молоко", 0.9)
+magnit.add_item("Яблоки", 0.45)
+magnit.add_item("Бананы", 0.55)
+magnit.add_item("Хлеб", 0.60)
+magnit.add_item("Молоко", 0.78)
 
-# Тестирование методов на примере store1
-store1.update_price("Яблоки", 0.55)
-print(store1.get_price("Яблоки"))  # Выведет обновленную цену 0.55
-store1.remove_item("Бананы")
-print(store1.get_price("Бананы"))  # Выведет None, так как товар был удален
+carusel.add_item("Яблоки", 0.55)
+carusel.add_item("Бананы", 0.75)
+carusel.add_item("Хлеб", 1.0)
+carusel.add_item("Молоко", 0.9)
+
+perekrestok.add_item("Яблоки", 0.73)
+perekrestok.add_item("Бананы", 0.95)
+perekrestok.add_item("Хлеб", 1.1)
+perekrestok.add_item("Молоко", 1.9)
+
+chijik.add_item("Яблоки", 0.35)
+chijik.add_item("Бананы", 0.42)
+chijik.add_item("Хлеб", 0.13)
+chijik.add_item("Молоко", 0.56)
+
+# Тестирование методов на примере магазина "Магнит"
+magnit.update_price("Яблоки", 0.55)
+print(magnit.get_price("Яблоки"))
+magnit.remove_item("Бананы")
+print(magnit.get_price("Бананы"))
